@@ -1,0 +1,4 @@
+<div class="todo-list" >
+    <app-todo-form (onAddTodo)="updateTodos($event)"></app-todo-form>
+    <app-todo-item *ngFor="let item of todos" [todosArr]="todos" [todoItem]="item" (onRemoveTodo)="deleteTodo($event)"></app-todo-item>
+</div>

@@ -1,0 +1,8 @@
+<div class="todo-item">
+    <ul>
+        <li class="todo-li" [class.completed]="todoItem.completed">{{todoItem.text}}</li>
+    </ul>
+    <button class="button complete-button" (click)="completeTodo()">Complete</button>
+    <button class="button delete-button" (click)="deleteTodo()">Delete</button>
+</div>
+
