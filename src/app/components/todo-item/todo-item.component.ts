@@ -16,7 +16,6 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('todosArr', this.todosArr);
-    
   }
 
   completeTodo() {

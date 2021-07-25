@@ -9,10 +9,10 @@ import { Todo } from 'src/app/interfaces/todo';
 export class TodoListComponent implements OnInit, DoCheck {
 
   constructor() { 
-    this.todos = JSON.parse(localStorage.getItem('todos')!) || [];
   }
 
   ngOnInit(): void {
+    this.todos = JSON.parse(localStorage.getItem('todos')!) || [];
   }
   ngDoCheck() {
     localStorage.setItem('todos', JSON.stringify(this.todos));
@@ -22,8 +22,18 @@ export class TodoListComponent implements OnInit, DoCheck {
 
   updateTodos(newTodo: Todo) {
     this.todos.unshift(newTodo);
+
   }
   deleteTodo(id:number) {
     this.todos = this.todos.filter((item)=> item.id !== id);
+  }
+  showAll() {
+    this.todos = this.todos.filter(item => item);
+  }
+  showActive() {
+    this.todos;
+  }
+  showCompleted() {
+    this.todos;
   }
 }

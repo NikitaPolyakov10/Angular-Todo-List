@@ -16,7 +16,7 @@ export class TodoFormComponent implements OnInit {
   }
   
   newTodoText: string = '';
-  id: number = 0;
+  id: number = 1;
 
   addTodo() {
     if(this.newTodoText.trim()) {
